@@ -2,7 +2,7 @@ require 'test_helper'
 
 class ProductsControllerTest < ActionDispatch::IntegrationTest
   setup do
-    @product = products(:one)
+    @product = Product(:one)
     @update = {
         title: 'Lorem Ipsum',
         description: 'Wibbles are fun!',
@@ -23,7 +23,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create product" do
     assert_difference('Product.count') do
-      post products_url, params: { product: {  title: @update }
+      # post products_url, params: { product: {  title: @update }
       # post products_url, params: { product: {  title: @product. title, description: @product.description, image_url: @product.image_url, price: @product.price } }
     end
 
