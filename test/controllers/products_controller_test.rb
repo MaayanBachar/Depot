@@ -23,7 +23,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create product" do
     assert_difference('Product.count') do
-      # post products_url, params: { product: {  title: @update }
+      post product_url, params: { product: {  title: @update }
       # post products_url, params: { product: {  title: @product. title, description: @product.description, image_url: @product.image_url, price: @product.price } }
     end
 
@@ -48,7 +48,7 @@ class ProductsControllerTest < ActionDispatch::IntegrationTest
 
   test "should destroy product" do
     assert_difference('Product.count', -1) do
-      delete product_url(@product)
+      delete Product_url(@product)
     end
 
     assert_redirected_to products_url
